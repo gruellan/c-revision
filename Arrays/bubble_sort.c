@@ -23,7 +23,7 @@ void printArray(int arr[], int size) {
 } 
   
 int main() { 
-    int arr[7];// A function to implement bubble sort 
+    int arr[7];
     printf("Make an array.\n");
     for (int i=0; i<7; i++) {
         printf("Element %d: ", i);
