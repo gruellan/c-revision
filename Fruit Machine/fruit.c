@@ -208,13 +208,13 @@ static struct roll_result run_once(int *const rolls, size_t num_rolls) {
 
     if (roll < 0 || roll >= num_rolls) {
       puts("Invalid roll");
+    } else {
+      rolls[roll] = (rolls[roll] + 1) % NUM_SYMBOLS;
+
+      puts("new result:");
+      print_rolls(rolls, num_rolls);
+      putchar('\n');
     }
-
-    rolls[roll] = (rolls[roll] + 1) % NUM_SYMBOLS;
-
-    puts("new result:");
-    print_rolls(rolls, num_rolls);
-    putchar('\n');
   }
 
   struct roll_result result = check_rolls(rolls, num_rolls);
